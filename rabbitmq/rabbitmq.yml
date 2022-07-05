@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.20-management-alpine
+    ports:
+      - "5672:5672"
+      - "8080:15672"
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    volumes:
+      - ./db-data/rabbitmq/:/var/lib/rabbitmq/

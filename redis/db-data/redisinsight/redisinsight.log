@@ -1,0 +1,2 @@
+WARNING 2022-07-02 19:37:11,285 django.request Bad Request: /api/instance/
+WARNING 2022-07-02 19:40:50,637 django.request Bad Request: /api/instance/0d900fb5-a84e-4a94-86ce-11f427ee893c/check-redisearch-module-loaded/

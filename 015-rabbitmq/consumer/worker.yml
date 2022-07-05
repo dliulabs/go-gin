@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: worker
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      RABBITMQ_URI: amqp://user:password@rabbitmq:5672/
+      RABBITMQ_QUEUE: rss_urls
+      MONGO_DATABASE: demo2
+      MONGO_URI: mongodb://admin:password@mongo:27017/
